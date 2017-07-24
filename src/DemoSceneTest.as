@@ -8,10 +8,9 @@ package   {
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
-	import flash.external.ExternalInterface;
-	import flash.text.TextField;
 	import flash.events.KeyboardEvent;
 	import flash.events.TimerEvent;
+	import flash.external.ExternalInterface;
 	import flash.system.System;
 	import flash.text.TextField;
 	import flash.text.TextFormat;
@@ -27,21 +26,20 @@ package   {
 	import away3d.loaders.parsers.Parsers;
 	
 	import demo.adapter.SceneAdapterManager;
+	import demo.display3D.Avatar3D;
+	import demo.display3D.Monster3D;
 	import demo.enum.LayerEnum;
+	import demo.enum.RoleEnum;
+	import demo.enum.SkillDefineEnum;
 	import demo.loader.DemoLoader;
 	import demo.managers.GameManager;
 	import demo.managers.WorldManager;
 	import demo.path.SceneConfigLoader;
 	import demo.path.vo.SceneConfig;
 	import demo.path.vo.SceneData;
-	import demo.display3D.Avatar3D;
-	import demo.enum.RoleEnum;
-	import demo.managers.GameManager;
-	import demo.managers.WorldManager;
+	import demo.vo.Monster3DVO;
 	
 	import feathers.themes.GuiTheme;
-		
-	import com.game.engine3D.manager.Stage3DLayerManager;
 		
 	/**
 	 * Application 
@@ -62,7 +60,8 @@ package   {
 		private var _timerCount : Number = 0;
 		private var _text : TextField=new TextField();
 		private var _textFormat : TextFormat = new TextFormat();
-			
+		private var _monster : Monster3D
+		
 		public function DemoSceneTest() {
 			super();
 			if (!this.stage) {
@@ -72,11 +71,11 @@ package   {
 			}
 			MultiUrlLoadManager.getUrlWithVersion = urlWithVersion;
 		}
-		
+
 		private static function urlWithVersion(input:String):String {
 			return input+"?v=333";
 		}
-		
+
 		/**
 		 * add to stage 
 		 * @param event
@@ -91,8 +90,7 @@ package   {
 			this.removeEventListener(Event.ADDED_TO_STAGE, onAddToStage);
 			this.init();
 		}
-		
-		
+	
 		/**
 		 *  Init ALL
 		 */		
@@ -186,6 +184,7 @@ package   {
 			this.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 			
 			Stage3DProxy.getInstance().context3D.enableErrorChecking = true;
+
 		}
 		
 		private function onbgLoadedCallback() : void {
@@ -254,7 +253,28 @@ package   {
 				}
 				trace(int(me.x) + ", 0, " + int(me.y));
 			}
+			
+			if (e.keyCode == Keyboard.M) {
+				//大部分角色模型身上少挂点等，配指向性技能会因找不到点会报错
+				if (_monster==null){		
+				    _monster = addMonster(0, "怪1", "../assets/role/11/jiruqianlong_xiugai.awd", me.x, me.z, SkillDefineEnum.SKILL_QINGLONG_SKILL_9, 14)
+		    	}
+			}
 		}
 		
+		private function addMonster(id : int, name : String, url : String, posX : int, posY : int, skillId : int, speed : int) : Monster3D {
+			var monsterVO : Monster3DVO = new Monster3DVO();
+			monsterVO.skillId = skillId;
+			monsterVO.id = id;
+			monsterVO.name = name;
+			monsterVO.url = url;
+			monsterVO.walkVelocity = speed;
+			monsterVO.posX = posX;
+			monsterVO.posY = posY;
+
+			var monster3D : Monster3D = new Monster3D(monsterVO);
+			WorldManager.instance.addMonster(monster3D);
+			return monster3D;
+		}	
 	}
 }
