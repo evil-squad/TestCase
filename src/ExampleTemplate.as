@@ -37,7 +37,7 @@ package
 		private var _lastMouseY:Number;
 		
 		private var awayStats:AwayStats;
-		private var groundGrid:WireframePlane = new WireframePlane(2000, 2000, 10, 10, 0xcccccc, 1, WireframePlane.ORIENTATION_XZ);
+		private var groundGrid:WireframePlane;
 		
 		private var _showDebug:Boolean = true;
 		private var _showGrid:Boolean = true;
@@ -45,7 +45,7 @@ package
 		public function ExampleTemplate() 
 		{
 			super();
-
+			
 			if (this.stage == null) {
 				this.addEventListener(Event.ADDED_TO_STAGE, onAddToStage);
 			} else {
@@ -80,8 +80,8 @@ package
 		{
 			// Away3D Setting
 			Away3D.USE_ATF_FOR_TEXTURES = true;
-			Away3D.EXTEND_MEMORY_SIZE = 150 * 1024 * 1024;
-			Away3D.MIN_HEAP_SIZE = 100 * 1024 * 1024;
+			//Away3D.EXTEND_MEMORY_SIZE = 150 * 1024 * 1024;
+			Away3D.MIN_HEAP_SIZE = 200 * 1024 * 1024;
 			MultiUrlLoadManager.maxQueueSize = 5;
 
 			// 初始化Stage3D
@@ -104,6 +104,7 @@ package
 			//_view.height = this.height;
 			_view.antiAlias = 2;
 			_view.camera.lens.far = 20000;
+			groundGrid = new WireframePlane(2000, 2000, 10, 10, 0xcccccc, 1, WireframePlane.ORIENTATION_XZ);
 			_view.scene.addChild(groundGrid);
 			addChild(awayStats = new AwayStats(Stage3DLayerManager.stage3DProxy));
 
