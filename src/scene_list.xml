@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<role_list>
+		<role path="character_all" name="tiandao" scale="1" id="10" weapon=""/>
+		<role path="jiruqianlong_xiugai" name="qsmy_new" scale="1" id="11" weapon=""/>
+		<role path="qinshiRole" name="qsmy" scale="1" id="12" weapon=""/>
+		<role path="male_fashi_animation" name="cq_fashi" scale="1" id="17" weapon="male_fashi_weapon"/>
+		<role path="male_zhanshi_animation" name="cq_zhanshi" scale="1" id="15" weapon="male_zhanshi_weapon"/>
+		<role path="tiandao_new" name="tiandao_new" scale="1" id="18" weapon=""/>
+	</role_list>
+	<scene_list>
+		<scene path="../assets/map/yl_scene01_gd/yl_scene01_gd.awd" name="ylgd" sceneID="0" bg="di.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="true" value="false"/>
+			<option name="depthOfField" comment="景深" enable="true" value="false"/>
+			<option name="hdr" comment="HDR" enable="false" value="false"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="10" x="22369" y="3882" z="25650" />
+		</scene>
+		<scene path="../assets/map/qsmy_lst_1/qsmy_lst_1.awd" name="qsmy" sceneID="1" bg="qsmy.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="true" value="false"/>
+			<option name="depthOfField" comment="景深" enable="true" value="false"/>
+			<option name="hdr" comment="HDR" enable="false" value="false"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="11" x="1865" y="910" z="24991"/>
+		</scene>
+		<scene path="../assets/map/tiandao_test_RealTime/tiandao_realtime_DayLight.awd" name="td_realtime" sceneID="2" bg="td.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="true" value="true"/>
+			<option name="depthOfField" comment="景深" enable="false" value="false"/>
+			<option name="hdr" comment="HDR" enable="true" value="true"/>
+			<option name="ssao" comment="SSAO" enable="true" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="10" x="11320" y="1297" z="15759" />
+		</scene>
+		<scene path="../assets/map/udk/udk_final.awd" name="udk_final" sceneID="3" bg="udk.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="false" value="false"/>
+			<option name="depthOfField" comment="景深" enable="false" value="false"/>
+			<option name="hdr" comment="HDR" enable="true" value="true"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+		</scene>
+		<scene path="../assets/map/udk/udk_final_batch.awd" name="udk_batch" sceneID="4" bg="udk.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="false" value="false"/>
+			<option name="depthOfField" comment="景深" enable="false" value="false"/>
+			<option name="hdr" comment="HDR" enable="true" value="true"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+		</scene>
+		<scene path="../assets/map/qsmy_mhzs/qsmy_mhzs.awd" name="qsmy_mhzs" sceneID="5" bg="td.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="true" value="false"/>
+			<option name="depthOfField" comment="景深" enable="true" value="false"/>
+			<option name="hdr" comment="HDR" enable="true" value="true"/>
+			<option name="ssao" comment="SSAO" enable="true" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="10" x="35621.6" y="8775" z="35699" />
+		</scene>
+		<scene path="../assets/map/chuanqi/cq_map01.awd" name="cq_map" sceneID="6" bg="cq.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="false" value="false"/>
+			<option name="depthOfField" comment="景深" enable="false" value="false"/>
+			<option name="hdr" comment="HDR" enable="false" value="false"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="15" x="8921" y="45" z="2245" />
+		</scene>
+		<scene path="../assets/map/tiandao_2/demotree.awd" name="demotree" sceneID="7" bg="td.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="false" value="false"/>
+			<option name="depthOfField" comment="景深" enable="false" value="false"/>
+			<option name="hdr" comment="HDR" enable="false" value="false"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="18" x="290301" y="2585.7" z="207700.4" />
+		</scene>
+		<scene path="../assets/map/jgc/jgc.awd" name="jgc" sceneID="8" bg="td.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="false" value="true"/>
+			<option name="depthOfField" comment="景深" enable="true" value="false">
+				<min>
+					<param name="focalDepth" value="100"/>
+					<param name="focalLegth" value="1.7"/>
+					<param name="blurSharpness" value="3.0"/>
+					<param name="bokehBloomThreshold" value="0.5"/>
+					<param name="bokehBloomGain" value="2.0"/>
+				</min>
+				<max>
+					<param name="focalDepth" value="420"/>
+					<param name="focalLegth" value="3.4"/>
+					<param name="blurSharpness" value="20.0"/>
+					<param name="bokehBloomThreshold" value="0.83"/>
+					<param name="bokehBloomGain" value="2.0"/>
+				</max>
+			</option>
+			<option name="hdr" comment="HDR" enable="true" value="true"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="18" x="-4818" y="-1240" z="-12456" />
+		</scene>
+		<scene path="../assets/map/tiandao_test_RealTime_old/tiandao_realtime_DayLight.awd" name="td_realtime_old" sceneID="9" bg="td.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="true" value="true"/>
+			<option name="depthOfField" comment="景深" enable="false" value="false"/>
+			<option name="hdr" comment="HDR" enable="true" value="true"/>
+			<option name="ssao" comment="SSAO" enable="true" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="10" x="11320" y="1297" z="15759" />
+		</scene>
+
+		<scene path="../assets/map/yl_secne01_djhy/yl_secne01_djhy.awd" name="ylgddjhy" sceneID="10" bg="di.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="true" value="false"/>
+			<option name="depthOfField" comment="景深" enable="true" value="false"/>
+			<option name="hdr" comment="HDR" enable="false" value="false"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="11" x="1745" y="81" z="1867" />
+		</scene>
+		
+		<scene path="../assets/map/yl_scene01_wc02/yl_scene01_wc02.awd" name="ylgdwc" sceneID="11" bg="di.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="true" value="false"/>
+			<option name="depthOfField" comment="景深" enable="true" value="false"/>
+			<option name="hdr" comment="HDR" enable="false" value="false"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="10" x="43917" y="7075" z="43436" />
+		</scene>
+		
+		<scene path="../assets/map/yl_scene01_tyz02/yl_scene01_tyz02_fog2+.awd" name="tyz02" sceneID="12" bg="di.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="false" value="false"/>
+			<option name="depthOfField" comment="景深" enable="true" value="false"/>
+			<option name="hdr" comment="HDR" enable="false" value="false"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+		</scene>
+		
+	</scene_list>
+
+	<default sceneID="9" bg="qsmy.jpg"/>
+</data>
