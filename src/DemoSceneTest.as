@@ -28,6 +28,7 @@ package   {
 	import demo.adapter.SceneAdapterManager;
 	import demo.display3D.Avatar3D;
 	import demo.display3D.Monster3D;
+	import demo.enum.IDEnum;
 	import demo.enum.LayerEnum;
 	import demo.enum.RoleEnum;
 	import demo.enum.SkillDefineEnum;
@@ -53,7 +54,7 @@ package   {
 		private var _bgName  : String;
 		private var _roleID  : int;	
 		private var _sceneIndex : int = -1;
-		private var _sceneIdArray : Array = [7,11];
+		private var _sceneIdArray : Array = [0,11];
 		private var _sceneArrayIndex : int = 0;
 		private var _timer : Timer = new Timer(8000, 0);
 		private var _isStart : Boolean = false;
@@ -205,6 +206,7 @@ package   {
 			WorldManager.instance.changeScene(11,10);
 		}
 		
+		private var monsterCount : int = 0
 		private function onKeyDown(e : KeyboardEvent) : void {
 			var me : demo.display3D.Avatar3D = GameManager.getInstance().mainRole;
 			var _roleType : int = RoleEnum.ROLE_TIAN_DAO;
@@ -254,27 +256,39 @@ package   {
 				trace(int(me.x) + ", 0, " + int(me.y));
 			}
 			
+			
 			if (e.keyCode == Keyboard.M) {
-				//大部分角色模型身上少挂点等，配指向性技能会因找不到点会报错
-				if (_monster==null){		
-				    _monster = addMonster(0, "怪1", "../assets/role/11/jiruqianlong_xiugai.awd", me.x, me.z, SkillDefineEnum.SKILL_QINGLONG_SKILL_9, 14)
-		    	}
+				//大部分角色模型身上少挂点等，配指向性技能会因找不到点会报错	
+				    _monster = addMonster("怪1", "../assets/role/18/tiandao_new.awd",SkillDefineEnum.SKILL_TD_TIAN_XIANG_SKILL_1, 14, me.x, me.z);
+					_monster.distanceFollow *=5;
+					_monster.distanceMinFollow = 0;
+					_monster.distanceMaxAttack = 50;
+					_monster.distanceMinAttack = 0;
+					
+					monsterCount++;
+					_text.text=monsterCount.toString();
+					_text.textColor = 0xffffff;
+					_text.height = 100;
+					_textFormat.size = 40;
+					_text.setTextFormat(_textFormat);
+					this.stage.addChild(_text);
+				
 			}
 		}
 		
-		private function addMonster(id : int, name : String, url : String, posX : int, posY : int, skillId : int, speed : int) : Monster3D {
+		private function addMonster(name : String, url : String, skillId : int, speed : int, posX : int, posY : int) : Monster3D {
 			var monsterVO : Monster3DVO = new Monster3DVO();
 			monsterVO.skillId = skillId;
-			monsterVO.id = id;
+			monsterVO.id = IDEnum.nextID;
 			monsterVO.name = name;
 			monsterVO.url = url;
 			monsterVO.walkVelocity = speed;
 			monsterVO.posX = posX;
 			monsterVO.posY = posY;
-
 			var monster3D : Monster3D = new Monster3D(monsterVO);
 			WorldManager.instance.addMonster(monster3D);
 			return monster3D;
-		}	
+		}
+		
 	}
 }
