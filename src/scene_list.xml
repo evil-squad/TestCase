@@ -181,7 +181,20 @@
 			<option name="quality" comment="画质" value="1.0"/>
 		</scene>
 		
+		<scene path="../assets/map/bsp/bsp.awd" name="bsp" sceneID="13" bg="di.jpg">
+			<option name="fpsStatus" comment="性能统计" enable="true" value="false"/>
+			<option name="screenSpaceShadow" comment="屏幕空间阴影" enable="true" value="false"/>
+			<option name="depthOfField" comment="景深" enable="true" value="false"/>
+			<option name="hdr" comment="HDR" enable="false" value="false"/>
+			<option name="ssao" comment="SSAO" enable="false" value="false"/>
+			<option name="antiAlias" comment="抗锯齿" value="2"/>
+			<option name="displayLevel" comment="显示等级" value="4"/>
+			<option name="shadowLevel" comment="阴影品质" value="4"/>
+			<option name="quality" comment="画质" value="1.0"/>
+			<role id="10" x="206887" y="597" z="74975" />
+		</scene>
+		
 	</scene_list>
 
-	<default sceneID="9" bg="qsmy.jpg"/>
+	<default sceneID="13" bg="qsmy.jpg"/>
 </data>
